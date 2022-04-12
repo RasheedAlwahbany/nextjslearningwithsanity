@@ -1,0 +1,37 @@
+{
+    "EOM":{
+        "ID":1,
+        "Name":"Rasheed Adnan",
+        "Position":"Software Engineer",
+        "Image":"http://localhost:83/users_json_api/react.jpg",
+        "Desc":"Hello there im choosing to be the employee of the month"
+    },
+    "feeds":[
+        {
+            "ID":1,
+            "Name":"Rasheed Adnan",
+            "Position":"Software Engineer",
+            "Image":"http://localhost:83/users_json_api/react.jpg",
+            "Desc":"Hello there im choosing to be the employee of the month"
+        },{
+            "ID":2,
+            "Name":"Ahmed",
+            "Position":"Software Engineer & Manager",
+            "Image":"http://localhost:83/users_json_api/react.jpg",
+            "Desc":"Ahmed is project manager"
+        },{
+            "ID":3,
+            "Name":"Ali",
+            "Position":"Warehouse worker",
+            "Image":"http://localhost:83/users_json_api/react.jpg",
+            "Desc":"Warehouse worker"
+        },{
+            "ID":4,
+            "Name":"Suheeb",
+            "Position":"Information technology",
+            "Image":"http://localhost:83/users_json_api/react.jpg",
+            "Desc":"Information technology in computer FCIT"
+        }
+    ]
+    
+}

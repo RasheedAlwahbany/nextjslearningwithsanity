@@ -114,3 +114,17 @@
     flex-direction: column;
   }
 }
+.ToolBar{
+  width:100% !important;
+  height:50% !important;
+  display:flex !important;
+  justify-content: center !important;
+}
+.ToolBar Link{
+  margin:100px !important;
+  width: 50px !important;
+  cursor: pointer;
+}
+.ToolBar Link:hover{
+  color:aqua !important;
+}
