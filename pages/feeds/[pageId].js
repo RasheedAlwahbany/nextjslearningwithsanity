@@ -1,10 +1,11 @@
 import { ToolBar } from "../../components/toolbar";
-import Link from "next/link";
 import styles from '../../styles/Home.module.css';
+import { useRouter } from "next/router";
 function Feed({ pageId, articles }) {
-
-    // if(articles.length<=pageId && pageId>0 ){
-    if(pageId>0 ){
+    const router=useRouter();
+const itemsCount=articles.length;
+    if(itemsCount>=pageId && pageId>0 ){
+    
 
     const article=articles.filter((article)=>article.ID===pageId);
     if(article){
@@ -27,13 +28,29 @@ function Feed({ pageId, articles }) {
                </div>
                </li>
       </ul>
-      <div >
-            {/* <div {pageId===1?desabled:enabled}></div> */}
+      <div className={styles.code}>
+            <span desabled={pageId===1?false:true} onClick={()=>{
+                if(pageId>1){
+                        router.push('/feeds/'+(pageId-1))
+                }
+            }}>{'<- Prev'}</span>  |   <span desabled={pageId===itemsCount?false:true} onClick={()=>{
+                if(pageId<itemsCount){
+                        router.push('/feeds/'+(pageId+1))
+                }
+            }}>{'Next ->'}</span>
       </div>
     </div>
   );
     }
-            }
+            }else
+            return (
+                <div className={styles.main}>
+                    <ToolBar />
+                    <h1>
+                    The feed you want is not exists.
+                    </h1>
+                </div>
+            )
     
 }
 
