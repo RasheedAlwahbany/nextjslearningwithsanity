@@ -96,11 +96,20 @@
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
-
+.card h1 {
+  color: #0070f3;
+  cursor: pointer;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.5;
+}
+
+.card img {
+  cursor: pointer;
 }
 
 .logo {

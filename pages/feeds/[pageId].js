@@ -6,7 +6,7 @@ function Feed({ pageId, articles }) {
     // if(articles.length<=pageId && pageId>0 ){
     if(pageId>0 ){
 
-    const article=articles.filter((article)=>article.ID==pageId);
+    const article=articles.filter((article)=>article.ID===pageId);
     if(article){
     return (
     <div className={styles.main}>
@@ -16,14 +16,16 @@ function Feed({ pageId, articles }) {
       <ul>
           
             <li>
+            <div  className={styles.card}>
               <h1>
                 {article[0].ID}: {article[0].Name}
               </h1>
-              <img src={article[0].Image} width="200" alt="Not found" height="200" />
+              {!!article[0].Image && <img src={article[0].Image} width="200" alt="Not found" height="200" />}
               <p>{article[0].Position}</p>
               <p>{article[0].Desc}</p>
-            </li>
-               
+            
+               </div>
+               </li>
       </ul>
     </div>
   );
@@ -49,7 +51,7 @@ export const getServerSideProps = async (pageContext) => {
   return {
     props: {
       articles: feeds,
-      pageId: pageId,
+      pageId: Number.parseInt(pageId),
     },
   };
 };

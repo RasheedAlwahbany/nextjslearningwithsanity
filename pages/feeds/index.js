@@ -12,14 +12,14 @@ function Feeds({ articles }) {
           return (
             // eslint-disable-next-line react/jsx-key
             <li> 
-            
+            <div  className={styles.card}>
               <h1>
               <a href={'/feeds/'+article.ID}>{article.ID}: {article.Name}</a>
               </h1>
-              <a href={'/feeds/'+article.ID}><img src={article.Image} width="200" alt="Not found" height="200" /></a>
+              <a href={'/feeds/'+article.ID}>{!!article.Image && <img src={article.Image} width="200" alt="Not found" height="200" />}</a>
               <p>{article.Position}</p>
               <p>{article.Desc}</p>
-              
+              </div>
             </li>
           );
         })}
@@ -38,7 +38,6 @@ export const getServerSideProps = async (pageContext) => {
   return {
     props: {
       articles: feeds,
-      pageId: 1,
     },
   };
 };
