@@ -27,6 +27,9 @@ function Feed({ pageId, articles }) {
                </div>
                </li>
       </ul>
+      <div >
+            {/* <div {pageId===1?desabled:enabled}></div> */}
+      </div>
     </div>
   );
     }

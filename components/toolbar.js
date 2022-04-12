@@ -5,6 +5,7 @@ export const ToolBar=()=>{
     return(
         <>
         <div className={styles.ToolBar}>
+            {/* <Link  onClick={()=>(window.location.href='/')}> Home </Link> */}
             <Link  href="/"> Home </Link>
             <Link  href="/eom"> EOM </Link>
             <Link  href="/feeds"> Feeds </Link>
