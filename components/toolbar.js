@@ -9,6 +9,7 @@ export const ToolBar=()=>{
             <Link  href="/"> Home </Link>
             <Link  href="/eom"> EOM </Link>
             <Link  href="/feeds"> Feeds </Link>
+            <Link  href="/feeds/from_sanity"> Sanity </Link>
         </div>
         </>
     )
